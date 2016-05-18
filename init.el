@@ -9,6 +9,24 @@
 ;; Set up load paths
 (package-initialize)
 
+
+(defconst demo-packages
+  '(helm
+    helm-gtags
+    smooth-scroll
+    auto-complete))
+
+(defun install-packages ()
+  "Install all required packages."
+  (interactive)
+  (unless package-archive-contents
+    (package-refresh-contents))
+  (dolist (package demo-packages)
+    (unless (package-installed-p package)
+      (package-install package))))
+
+(install-packages)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;; Helm configuration ;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
