@@ -46,6 +46,8 @@
 ;(require 'ido)
 ;(ido-mode t)
 
+(desktop-save-mode 1)
+
 (setq backup-directory-alist
 			`((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
@@ -114,6 +116,7 @@
    (R . t)
    (org . t)
    (makefile . t)
+	 (latex . t)
    ))
 (setq org-src-preserve-indentation t)
 
@@ -131,6 +134,12 @@
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
 (ac-config-default)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;; Smooth scroll ;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'smooth-scroll)
+(smooth-scroll-mode 1)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;; Custom theme ;;;;;;;;;
