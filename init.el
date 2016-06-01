@@ -24,12 +24,15 @@
     (unless (package-installed-p package)
       (package-install package))))
 
+;; Packages to install
 (defconst install-these-packs
-  '(volatile-highlights
-    yasnippet
+  '(auto-complete
+    ess
+    helm
+    indent-guide
     nyan-mode
-    indent-guide))
-
+    volatile-highlights
+    yasnippet))
 (install-packages)
 
 (require 'setup-applications)
@@ -71,6 +74,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;; indent-guide ;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(require 'indent-guide)
-(indent-guide-global-mode)
-(setq indent-guide-recursive t)
+;(require 'indent-guide)
+;(indent-guide-global-mode)
+;(setq indent-guide-recursive t)
