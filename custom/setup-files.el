@@ -8,6 +8,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; GROUP: Files -> Back up            ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defvar backup-directory "~/.emacs-backups")
+(if (not (file-exists-p backup-directory))
+    (make-directory backup-directory t))
 (setq
  make-backup-files t        ; backup a file the first time it is saved
  backup-directory-alist `((".*" . ,temporary-file-directory)) ; save backup files in ~/.backups
