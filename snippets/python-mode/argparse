@@ -1,0 +1,25 @@
+# -*- mode: python -*-
+# name: argparse
+# key: argparse
+# --
+
+import argparse
+
+def parse():
+  parser = argparse.ArgumentParser(
+    description='$0')
+
+#  parser.add_argument('-r', '--recursive',
+#                      default = False,
+#                      action = 'store_const', const = True,
+#                      help='Whether to process all folders under current dir.')
+#  parser.add_argument('--print-header', default = False,
+#                      action = 'store_const', const = True,
+#                      help='Whether to print header information.')
+#  parser.add_argument('filename',
+#                      help = "File to process.")
+  
+  args = parser.parse_args()
+  
+  
+  return args
