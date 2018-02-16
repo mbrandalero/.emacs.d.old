@@ -7,6 +7,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; only turn on if a window system is available
 ;; this prevents error under terminal that does not support X
+(require 'cl)
 (case window-system
   ((x w32) (nyan-mode)))
 
